@@ -51,3 +51,5 @@ Storage has park kind arch marry.
 Storage has park kind arch land.
 
 Storage is did.
+
+Storage has major.
