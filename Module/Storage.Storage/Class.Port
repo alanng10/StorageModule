@@ -1,0 +1,17 @@
+[Module]
+Storage.Storage:0.00.00
+
+[Import]
+System.Infra
+    Bool Bool
+    Int Int
+System.Text
+    TextForm Form
+    TextInfra Infra
+
+[Export]
+NameForm
+
+[Storage]
+
+[Entry]
