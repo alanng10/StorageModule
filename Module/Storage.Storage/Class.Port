@@ -5,6 +5,7 @@ Storage.Storage:0.00.00
 System.Infra
     Bool Bool
     Int Int
+    Extern Extern
 System.Text
     TextForm Form
     TextInfra Infra
