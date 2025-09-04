@@ -30,8 +30,8 @@ class NameForm : TextForm
     field precate TextInfra TextInfra { get { return data; } set { data : value; } }
     field precate TextForm Form { get { return data; } set { data : value; } }
 
-    maide prusate Int Execute(var Int n)
+    maide prusate Int Execute(var Int value)
     {
-        return this.Form.Execute(n);
+        return this.Form.Execute(value);
     }
 }
