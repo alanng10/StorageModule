@@ -3,8 +3,8 @@ class Comp : StorageComp
     maide prusate Bool Init()
     {
         base.Init();
-        this.Extern : share Extern;
-        this.InternInfra : share InternInfra;
+        this.PrivateExtern : share Extern;
+        this.PrivateInternInfra : share InternInfra;
         return true;
     }
 
@@ -129,8 +129,11 @@ class Comp : StorageComp
         ka : 1;
         ka : bit <(ka, index);
 
+        var Int k;
+        k : bit & (value, ka);
+
         var Bool a;
-        a : ~(bit &(value, ka) = 0);
+        a : ~(k = 0);
         return a;
     }
 }
