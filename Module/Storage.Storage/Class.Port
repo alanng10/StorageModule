@@ -18,6 +18,7 @@ System.Storage
 [Export]
 Comp
 Entry
+Permit
 NameForm
 
 [Storage]
