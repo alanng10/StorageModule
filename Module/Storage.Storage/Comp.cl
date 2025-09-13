@@ -103,4 +103,20 @@ class Comp : StorageComp
 
         return a;
     }
+
+    maide private Permit Permit(var Int value)
+    {
+        var Permit a;
+        a : new Permit();
+        a.Init();
+
+        a.OwnerRead : this.HasFlag(value, 0);
+        a.OwnerWrite : this.HasFlag(value, 1);
+        a.GroupRead : this.HasFlag(value, 2);
+        a.GroupWrite : this.HasFlag(value, 3);
+        a.OtherRead : this.HasFlag(value, 4);
+        a.OtherWrite : this.HasFlag(value, 5);
+        a.Other : -1;
+        return a;
+    }
 }
