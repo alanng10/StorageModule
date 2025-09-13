@@ -129,11 +129,8 @@ class Comp : StorageComp
         ka : 1;
         ka : bit <(ka, index);
 
-        var Int k;
-        k : bit & (value, ka);
-
         var Bool a;
-        a : ~(k = 0);
+        a : ~((bit & (value, ka)) = 0);
         return a;
     }
 }
