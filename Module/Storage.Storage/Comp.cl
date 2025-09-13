@@ -96,8 +96,8 @@ class Comp : StorageComp
 
         this.InternInfra.StringDelete(nameK);
 
-        Extern.StorageEntry_Final(ka);
-        Extern.StorageEntry_Delete(ka);
+        extern.StorageEntry_Final(ka);
+        extern.StorageEntry_Delete(ka);
 
         this.InternInfra.StringDelete(pathU);
 
