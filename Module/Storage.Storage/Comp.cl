@@ -46,7 +46,6 @@ class Comp : StorageComp
 
         var String name;
         var Bool exist;
-        exist : false;
         var Bool fold;
         var Int size;
         var Int createTime;
