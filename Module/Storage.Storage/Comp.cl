@@ -119,4 +119,15 @@ class Comp : StorageComp
         a.Other : null;
         return a;
     }
+
+    maide private Bool HasFlag(var Int value, var Int index)
+    {
+        var Int ka;
+        ka : 1;
+        ka : bit <(ka, index);
+
+        var Bool a;
+        a : ~(bit &(value, ka) = 0);
+        return a;
+    }
 }
