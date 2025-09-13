@@ -57,11 +57,11 @@ class Comp : StorageComp
 
         name : this.InternInfra.StringCreateIntern(nameK);
 
-        exist : !(existK == 0);
+        exist : !(existK = 0);
 
         if (exist)
         {
-            fold : !(foldK == 0);
+            fold : !(foldK = 0);
 
             if (!fold)
             {
