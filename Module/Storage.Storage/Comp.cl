@@ -59,18 +59,18 @@ class Comp : StorageComp
 
         exist : !(existK = 0);
 
-        if (exist)
+        inf (exist)
         {
             fold : !(foldK = 0);
 
-            if (!fold)
+            inf (!fold)
             {
                 size : (long)sizeK;
             }
 
             createTime : (long)createTimeK;
 
-            if (!fold)
+            inf (!fold)
             {
                 modifyTime : (long)modifyTimeK;
             }
