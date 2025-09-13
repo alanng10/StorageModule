@@ -26,7 +26,7 @@ class Comp : StorageComp
         ka : extern.StorageEntry_New();
         extern.StorageEntry_Init(ka);
 
-        extern.StorageComp_Entry(this.Intern, ka, pathU);
+        extern.StorageComp_Entry(0, ka, pathU);
 
         var Int nameK;
         var Int existK;
