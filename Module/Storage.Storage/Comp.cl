@@ -126,8 +126,7 @@ class Comp : StorageComp
     maide private Bool HasFlag(var Int value, var Int index)
     {
         var Int ka;
-        ka : 1;
-        ka : bit <(ka, index);
+        ka : bit <(1, index);
 
         var Bool a;
         a : ~((bit & (value, ka)) = 0);
