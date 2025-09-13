@@ -8,16 +8,19 @@ class Comp : StorageComp
         return true;
     }
 
-    field private Extern Extern { get { return data; } set { data : value; } }
-    field private InternInfra InternInfra { get { return data; } set { data : value; } }
+    field private Extern PrivateExtern { get { return data; } set { data : value; } }
+    field private InternInfra PrivateInternInfra { get { return data; } set { data : value; } }
 
     maide prusate Entry Entry(var String path)
     {
+        var InternInfra internInfra;
+        internInfra : this.PrivateInternInfra;
+
         var Int pathU;
-        pathU : this.InternInfra.StringCreate(path);
+        pathU : internInfra.StringCreate(path);
 
         var Extern extern;
-        extern : this.Extern;
+        extern : this.PrivateExtern;
 
         var Int ka;
         ka : extern.StorageEntry_New();
@@ -54,7 +57,7 @@ class Comp : StorageComp
         var Int group;
         var Permit permit;
 
-        name : this.InternInfra.StringCreateIntern(nameK);
+        name : internInfra.StringCreateIntern(nameK);
 
         exist : ~(existK = 0);
 
@@ -94,12 +97,12 @@ class Comp : StorageComp
         a.Group : group;
         a.Permit : permit;
 
-        this.InternInfra.StringDelete(nameK);
+        internInfra.StringDelete(nameK);
 
         extern.StorageEntry_Final(ka);
         extern.StorageEntry_Delete(ka);
 
-        this.InternInfra.StringDelete(pathU);
+        internInfra.StringDelete(pathU);
 
         return a;
     }
