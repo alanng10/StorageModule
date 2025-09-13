@@ -9,8 +9,11 @@ System.Infra
 System.Text
     TextForm Form
     TextInfra Infra
+System.Storage
+    StorageComp Comp
 
 [Export]
+Comp
 NameForm
 
 [Storage]
