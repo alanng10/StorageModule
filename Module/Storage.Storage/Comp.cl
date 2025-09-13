@@ -57,29 +57,29 @@ class Comp : StorageComp
 
         name : this.InternInfra.StringCreateIntern(nameK);
 
-        exist : !(existK = 0);
+        exist : ~(existK = 0);
 
         inf (exist)
         {
-            fold : !(foldK = 0);
+            fold : ~(foldK = 0);
 
-            inf (!fold)
+            inf (~fold)
             {
-                size : (long)sizeK;
+                size : sizeK;
             }
 
-            createTime : (long)createTimeK;
+            createTime : createTimeK;
 
-            inf (!fold)
+            inf (~fold)
             {
-                modifyTime : (long)modifyTimeK;
+                modifyTime : modifyTimeK;
             }
 
-            owner : (long)ownerK;
+            owner : ownerK;
 
-            group : (long)groupK;
+            group : groupK;
 
-            permit : this.Permit((long)permitK);
+            permit : this.Permit(permitK);
         }
 
         Entry a;
