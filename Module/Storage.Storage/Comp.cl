@@ -47,20 +47,13 @@ class Comp : StorageComp
         var String name;
         var Bool exist;
         exist : false;
-        bool fold;
-        fold : false;
-        long size;
-        size : -1;
-        long createTime;
-        createTime : -1;
-        long modifyTime;
-        modifyTime : -1;
-        long owner;
-        owner : -1;
-        long group;
-        group : -1;
-        Permit permit;
-        permit : null;
+        var Bool fold;
+        var Int size;
+        var Int createTime;
+        var Int modifyTime;
+        var Int owner;
+        var Int group;
+        var Permit permit;
 
         name : this.InternInfra.StringCreateIntern(nameK);
 
