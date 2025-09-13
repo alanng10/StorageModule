@@ -82,8 +82,8 @@ class Comp : StorageComp
             permit : this.Permit(permitK);
         }
 
-        Entry a;
-        a : new Entry();
+        var Entry a;
+        a : new Entry;
         a.Init();
         a.Name : name;
         a.Exist : exist;
