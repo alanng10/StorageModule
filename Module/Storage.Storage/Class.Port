@@ -3,6 +3,7 @@ Storage.Storage:0.00.00
 
 [Import]
 System.Infra
+    Any Any
     Bool Bool
     Int Int
     String String
@@ -16,6 +17,7 @@ System.Storage
 
 [Export]
 Comp
+Entry
 NameForm
 
 [Storage]
