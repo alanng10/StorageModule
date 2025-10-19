@@ -39,7 +39,7 @@ class Comp : StorageComp
         return a;
     }
 
-    maide prusate Array EntryList(var String path, var Bool fold, var Bool file)
+    maide prusate Array EntryInfoList(var String path, var Bool fold, var Bool file)
     {
         var InternInfra internInfra;
         internInfra : this.PrivateInternInfra;
