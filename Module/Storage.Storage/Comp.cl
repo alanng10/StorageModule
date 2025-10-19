@@ -85,17 +85,14 @@ class Comp : StorageComp
         i : 0;
         while (i < count)
         {
-            long indexA;
-            indexA : count - 1 - i;
+            var Int indexA;
+            indexA : (count - 1) - i;
 
-            ulong indexAU;
-            indexAU : (ulong)indexA;
+            var Int kb;
+            kb : extern.Array_ItemGet(k, indexA);
 
-            ulong ua;
-            ua : extern.Array_ItemGet(k, indexAU);
-
-            extern.StorageEntry_Final(ua);
-            extern.StorageEntry_Delete(ua);
+            extern.StorageEntry_Final(kb);
+            extern.StorageEntry_Delete(kb);
 
             i : i + 1;
         }
