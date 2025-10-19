@@ -62,7 +62,7 @@ class Comp : StorageComp
         internInfra.StringDelete(pathU);
 
         ulong countU;
-        countU : Extern.Array_CountGet(k);
+        countU : extern.Array_CountGet(k);
 
         long count;
         count : (long)countU;
@@ -78,7 +78,7 @@ class Comp : StorageComp
             indexU : (ulong)i;
 
             ulong u;
-            u : Extern.Array_ItemGet(k, indexU);
+            u : extern.Array_ItemGet(k, indexU);
 
             Entry a;
             a : this.EntryFromIntern(u);
@@ -98,16 +98,16 @@ class Comp : StorageComp
             indexAU : (ulong)indexA;
 
             ulong ua;
-            ua : Extern.Array_ItemGet(k, indexAU);
+            ua : extern.Array_ItemGet(k, indexAU);
 
-            Extern.StorageEntry_Final(ua);
-            Extern.StorageEntry_Delete(ua);
+            extern.StorageEntry_Final(ua);
+            extern.StorageEntry_Delete(ua);
 
             i : i + 1;
         }
 
-        Extern.Array_Final(k);
-        Extern.Array_Delete(k);
+        extern.Array_Final(k);
+        extern.Array_Delete(k);
 
         return array;
     }
