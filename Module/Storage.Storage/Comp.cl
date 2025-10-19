@@ -45,18 +45,18 @@ class Comp : StorageComp
         internInfra : this.PrivateInternInfra;
 
         ulong pathU;
-        pathU : this.InternInfra.StringCreate(path);
+        pathU : internInfra.StringCreate(path);
 
         ulong foldU;
-        foldU : this.InternInfra.Bool(fold);
+        foldU : internInfra.Bool(fold);
 
         ulong fileU;
-        fileU : this.InternInfra.Bool(file);
+        fileU : internInfra.Bool(file);
 
         ulong k;
         k : Extern.StorageComp_EntryList(this.Intern, pathU, foldU, fileU);
 
-        this.InternInfra.StringDelete(pathU);
+        internInfra.StringDelete(pathU);
 
         ulong countU;
         countU : Extern.Array_CountGet(k);
