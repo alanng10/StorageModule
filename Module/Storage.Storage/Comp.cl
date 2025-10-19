@@ -28,6 +28,19 @@ class Comp : StorageComp
 
         extern.StorageComp_Entry(0, k, pathU);
 
+        var Entry a;
+        a : this.EntryFromIntern(k);
+
+        extern.StorageEntry_Final(k);
+        extern.StorageEntry_Delete(k);
+
+        internInfra.StringDelete(pathU);
+
+        return a;
+    }
+
+    maide private Entry EntryFromIntern(var Int k)
+    {
         var Int nameK;
         var Int existK;
         var Int foldK;
@@ -98,11 +111,6 @@ class Comp : StorageComp
         a.Permit : permit;
 
         internInfra.StringDelete(nameK);
-
-        extern.StorageEntry_Final(k);
-        extern.StorageEntry_Delete(k);
-
-        internInfra.StringDelete(pathU);
 
         return a;
     }
