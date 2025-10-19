@@ -41,63 +41,66 @@ class Comp : StorageComp
 
     maide prusate Array EntryList(var String path, var Bool fold, var Bool file)
     {
+        var InternInfra internInfra;
+        internInfra : this.PrivateInternInfra;
+
         ulong pathU;
-        pathU = this.InternInfra.StringCreate(path);
+        pathU : this.InternInfra.StringCreate(path);
 
         ulong foldU;
-        foldU = this.InternInfra.Bool(fold);
+        foldU : this.InternInfra.Bool(fold);
 
         ulong fileU;
-        fileU = this.InternInfra.Bool(file);
+        fileU : this.InternInfra.Bool(file);
 
         ulong k;
-        k = Extern.StorageComp_EntryList(this.Intern, pathU, foldU, fileU);
+        k : Extern.StorageComp_EntryList(this.Intern, pathU, foldU, fileU);
 
         this.InternInfra.StringDelete(pathU);
 
         ulong countU;
-        countU = Extern.Array_CountGet(k);
+        countU : Extern.Array_CountGet(k);
 
         long count;
-        count = (long)countU;
+        count : (long)countU;
 
         Array array;
-        array = this.ListInfra.ArrayCreate(count);
+        array : this.ListInfra.ArrayCreate(count);
 
         long i;
-        i = 0;
+        i : 0;
         while (i < count)
         {
             ulong indexU;
-            indexU = (ulong)i;
+            indexU : (ulong)i;
 
             ulong u;
-            u = Extern.Array_ItemGet(k, indexU);
+            u : Extern.Array_ItemGet(k, indexU);
 
             Entry a;
-            a = this.EntryFromIntern(u);
+            a : this.EntryFromIntern(u);
 
             array.SetAt(i, a);
 
-            i = i + 1;
+            i : i + 1;
         }
 
-        i = 0;
+        i : 0;
         while (i < count)
         {
             long indexA;
-            indexA = count - 1 - i;
+            indexA : count - 1 - i;
 
             ulong indexAU;
-            indexAU = (ulong)indexA;
+            indexAU : (ulong)indexA;
 
             ulong ua;
-            ua = Extern.Array_ItemGet(k, indexAU);
+            ua : Extern.Array_ItemGet(k, indexAU);
 
             Extern.StorageEntry_Final(ua);
             Extern.StorageEntry_Delete(ua);
 
-            i = i + 1;
+            i : i + 1;
         }
 
         Extern.Array_Final(k);
