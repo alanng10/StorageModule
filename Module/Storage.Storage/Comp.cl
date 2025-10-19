@@ -44,13 +44,13 @@ class Comp : StorageComp
         var InternInfra internInfra;
         internInfra : this.PrivateInternInfra;
 
-        ulong pathU;
+        var Int pathU;
         pathU : internInfra.StringCreate(path);
 
-        ulong foldU;
+        var Int foldU;
         foldU : internInfra.Bool(fold);
 
-        ulong fileU;
+        var Int fileU;
         fileU : internInfra.Bool(file);
 
         ulong k;
