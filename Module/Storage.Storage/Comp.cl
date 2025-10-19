@@ -61,11 +61,8 @@ class Comp : StorageComp
 
         internInfra.StringDelete(pathU);
 
-        ulong countU;
-        countU : extern.Array_CountGet(k);
-
-        long count;
-        count : (long)countU;
+        var Int count;
+        count : extern.Array_CountGet(k);
 
         Array array;
         array : this.ListInfra.ArrayCreate(count);
