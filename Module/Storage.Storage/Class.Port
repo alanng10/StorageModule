@@ -9,6 +9,8 @@ System.Infra
     String String
     Extern Extern
     InternInfra InternInfra
+System.List
+    Array Array
 System.Text
     TextForm Form
     TextInfra Infra
