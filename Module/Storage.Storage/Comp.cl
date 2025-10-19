@@ -41,6 +41,9 @@ class Comp : StorageComp
 
     maide private Entry EntryFromIntern(var Int k)
     {
+        var InternInfra internInfra;
+        internInfra : this.PrivateInternInfra;
+
         var Int nameK;
         var Int existK;
         var Int foldK;
