@@ -53,8 +53,11 @@ class Comp : StorageComp
         var Int fileU;
         fileU : internInfra.Bool(file);
 
-        ulong k;
-        k : Extern.StorageComp_EntryList(this.Intern, pathU, foldU, fileU);
+        var Extern extern;
+        extern : this.PrivateExtern;
+
+        var Int k;
+        k : extern.StorageComp_EntryList(0, pathU, foldU, fileU);
 
         internInfra.StringDelete(pathU);
 
