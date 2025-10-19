@@ -64,23 +64,20 @@ class Comp : StorageComp
         var Int count;
         count : extern.Array_CountGet(k);
 
-        Array array;
+        var Array array;
         array : this.ListInfra.ArrayCreate(count);
 
-        long i;
+        var Int i;
         i : 0;
         while (i < count)
         {
-            ulong indexU;
-            indexU : (ulong)i;
+            var Int ka;
+            ka : extern.Array_ItemGet(k, i);
 
-            ulong u;
-            u : extern.Array_ItemGet(k, indexU);
+            var Entry a;
+            a : this.EntryFromIntern(ka);
 
-            Entry a;
-            a : this.EntryFromIntern(u);
-
-            array.SetAt(i, a);
+            array.Set(i, a);
 
             i : i + 1;
         }
