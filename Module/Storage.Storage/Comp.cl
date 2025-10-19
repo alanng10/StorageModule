@@ -22,11 +22,11 @@ class Comp : StorageComp
         var Extern extern;
         extern : this.PrivateExtern;
 
-        var Int ka;
-        ka : extern.StorageEntry_New();
-        extern.StorageEntry_Init(ka);
+        var Int k;
+        k : extern.StorageEntry_New();
+        extern.StorageEntry_Init(k);
 
-        extern.StorageComp_Entry(0, ka, pathU);
+        extern.StorageComp_Entry(0, k, pathU);
 
         var Int nameK;
         var Int existK;
@@ -37,15 +37,15 @@ class Comp : StorageComp
         var Int ownerK;
         var Int groupK;
         var Int permitK;
-        nameK : extern.StorageEntry_NameGet(ka);
-        existK : extern.StorageEntry_ExistGet(ka);
-        foldK : extern.StorageEntry_FoldGet(ka);
-        sizeK : extern.StorageEntry_SizeGet(ka);
-        createTimeK : extern.StorageEntry_CreateTimeGet(ka);
-        modifyTimeK : extern.StorageEntry_ModifyTimeGet(ka);
-        ownerK : extern.StorageEntry_OwnerGet(ka);
-        groupK : extern.StorageEntry_GroupGet(ka);
-        permitK : extern.StorageEntry_PermitGet(ka);
+        nameK : extern.StorageEntry_NameGet(k);
+        existK : extern.StorageEntry_ExistGet(k);
+        foldK : extern.StorageEntry_FoldGet(k);
+        sizeK : extern.StorageEntry_SizeGet(k);
+        createTimeK : extern.StorageEntry_CreateTimeGet(k);
+        modifyTimeK : extern.StorageEntry_ModifyTimeGet(k);
+        ownerK : extern.StorageEntry_OwnerGet(k);
+        groupK : extern.StorageEntry_GroupGet(k);
+        permitK : extern.StorageEntry_PermitGet(k);
 
         var String name;
         var Bool exist;
@@ -99,8 +99,8 @@ class Comp : StorageComp
 
         internInfra.StringDelete(nameK);
 
-        extern.StorageEntry_Final(ka);
-        extern.StorageEntry_Delete(ka);
+        extern.StorageEntry_Final(k);
+        extern.StorageEntry_Delete(k);
 
         internInfra.StringDelete(pathU);
 
