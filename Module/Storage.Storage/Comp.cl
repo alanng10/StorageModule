@@ -44,6 +44,9 @@ class Comp : StorageComp
         var InternInfra internInfra;
         internInfra : this.PrivateInternInfra;
 
+        var Extern extern;
+        extern : this.PrivateExtern;
+
         var Int nameK;
         var Int existK;
         var Int foldK;
