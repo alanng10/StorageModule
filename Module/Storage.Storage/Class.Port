@@ -16,12 +16,14 @@ System.Text
     TextInfra Infra
 System.Storage
     StorageComp Comp
+    StorageInfra Infra
 
 [Export]
 Comp
 Entry
 Permit
 NameForm
+Infra
 
 [Storage]
 
