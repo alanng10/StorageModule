@@ -9,7 +9,7 @@ class Infra : StorageInfra
     maide precate NameForm CreateNameForm()
     {
         var NameForm a;
-        a = new NameForm();
+        a : new NameForm;
         a.Init();
         return a;
     }
