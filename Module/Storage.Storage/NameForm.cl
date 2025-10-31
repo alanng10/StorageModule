@@ -26,7 +26,7 @@ class NameForm : TextForm
         return true;
     }
 
-    field precate Extern Extern { get { return data; } set { data : value; } }
+    field private Extern Extern { get { return data; } set { data : value; } }
     field precate TextInfra TextInfra { get { return data; } set { data : value; } }
     field precate TextForm Form { get { return data; } set { data : value; } }
 
