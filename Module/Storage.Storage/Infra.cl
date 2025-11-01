@@ -2,6 +2,8 @@ class Infra : StorageInfra
 {
     maide prusate Bool Init()
     {
+        base.Init();
+
         this.NameForm : this.CreateNameForm();
         return true;
     }
