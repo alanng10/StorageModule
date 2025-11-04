@@ -1,3 +1,3 @@
 @echo off
 
-call ..\Script\Module\Make StorageModule Storage.Storage
+call ..\Script\Module\MakeSaber StorageModule Storage.Storage
